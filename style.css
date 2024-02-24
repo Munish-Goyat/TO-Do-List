@@ -14,7 +14,6 @@ body {
     padding: 50px;
     overflow: auto;
 }
-
 input {
     border: 1px solid rgb(61, 253, 253);
     border-radius: 3px;
@@ -78,8 +77,62 @@ ul li {
     background-color: transparent;
     color: white;
     font-size: 1.5rem;
-}
-.box:hover {
+    animation-name: grow;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
     box-shadow: 5px 5px 10px 1px aquamarine;
-    transform: scale(1.01);
+}
+@keyframes grow {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 2px 1px aquamarine;
+}
+.logo {
+    margin-left: 10px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+.logo:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.navitem{
+    display: flex;
+}
+.navitem a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+}
+.navitem a:hover{
+    color: gray;
+}
+.heading{
+    font-size: 20px;
+    display: flex;
+}
+.heading img {
+    height: 60px;
+    margin-top: 20px;
 }
